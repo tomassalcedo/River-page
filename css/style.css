@@ -594,7 +594,7 @@ footer{
     }
 
     .logo img{
-        content: url('/assets/logo-river-xs.png');
+        content: url('../assets/logo-river-xs.png');
         width: 8rem;
     }
 
@@ -814,7 +814,7 @@ footer{
     .social-links{
         margin-bottom: 2rem;
         width: 100%;
-        border: 2px solid red;
+        
         flex-wrap: wrap;
     }
 
@@ -831,11 +831,7 @@ footer{
         display: none;
     }
 
-    .personal-info{
-        border: 2px solid red;
-        
-    }
-
+   
     .publicidad-gif{
         width: 20rem;
         margin-left: 5rem;
