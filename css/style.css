@@ -1,0 +1,849 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow-x: hidden;
+}
+header{
+    
+    height: 3rem;
+    display: flex;
+    align-items:center ;
+    justify-content: space-between;
+    padding-left: 15rem;
+    padding-right: 4rem;
+    
+}
+
+.header-item{
+    padding: 0 0.5rem; 
+    margin-top: 0.5rem;
+    
+    width: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+
+}
+
+
+
+.header-item img {
+    /* max-width: 100%; */
+    height: auto; 
+    
+}
+
+
+
+
+.separator{
+    color: gray;
+    margin: 0 0.3rem;
+}
+
+
+
+.header-item span {
+    white-space: nowrap; /* Evita que el texto se divida en múltiples líneas */
+    overflow: hidden; /* Oculta cualquier parte del texto que desborde del contenedor */
+    text-overflow: ellipsis; /* Agrega puntos suspensivos (...) al final del texto que desborda */
+    color: grey;
+}
+
+.header-item a{
+    text-decoration: none;
+    color: grey;
+    font-family: sans-serif;
+    font-size: 0.8rem;
+}
+
+
+nav{
+    background-color: rgb(34, 34, 34);
+    width: 100wv;
+    height: 2rem;
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    border: 1.5px solid black;
+}
+
+
+.menu-icon{
+    display: none;
+}
+
+.menu{
+    display: none;
+}
+
+.logo{
+   
+    margin-left: 2rem;
+    
+   
+}
+
+.logo img{
+    margin-top: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover img{
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+.nav-item{
+    
+    height: 2rem;
+    /* border: 1.5px solid  black; */
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 1rem;
+    margin-top: 0.6rem;
+    border-radius: 8px;
+
+    transition: background-color 0.1s ease;
+}
+
+.nav-item:hover{
+    background-color: red;
+    
+}
+
+
+
+.nav-item i{
+    font-size: 1.5rem;   
+}
+
+
+.banner{
+    width: 100%;  
+}
+
+.banner img{
+    width: 100%;
+    transition: filter 0.3s ease;
+}
+
+
+.banner img:hover {
+    filter: brightness(110%) saturate(120%) hue-rotate(10deg);
+    
+}
+
+
+
+
+
+
+.noticias{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 2rem;
+}
+
+
+.noticias-principales{
+    position: relative;
+    width: auto;
+    
+    display: inline-block;
+    height: 29rem;
+}
+
+
+
+.noticias-principales p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    opacity: 0; /* Inicialmente invisible */
+    transition: opacity 0.3s ease; /* Transición suave para el efecto hover */
+    
+    margin-top: 2rem;
+    font-family: sans-serif;
+      
+    
+}
+
+
+.noticias-principales img{
+    display: block; /* Asegura que la imagen se comporta como bloque */
+    max-width: 100%;
+    transition: filter 0.3s ease;
+    
+    
+}
+
+
+
+.noticias-principales:hover p {
+    opacity: 1; /* Hace visible el párrafo al hacer hover */
+}
+
+
+
+
+
+
+.noticias-secundarias{
+    display: flex;
+    flex-direction: column;
+    width: 14%;
+    margin-top: 1rem;
+    margin-left: 3rem;
+    /* border: 2px solid blue; */
+
+}
+
+
+.noticia-img img{
+    margin-top: 1rem;
+    max-width: 100%;
+}
+
+.noticia-text{
+    margin-left: 0.4rem;
+    margin-top: 0.3rem;
+    
+}
+
+
+.barra-separadora{
+    color: rgb(143, 141, 141);
+    
+}
+
+
+.noticia h3{
+    font-family: sans-serif;
+    font-size: 1.2rem;
+    color: red;
+    font-weight: 300; 
+    margin-top: 0.5rem;
+    margin-bottom: 0.4rem;
+}
+
+.noticias h2{
+    font-family: sans-serif;
+    text-align: start;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    font-weight: 259;
+    color: rgb(20, 20, 20)   
+}
+
+.noticias-principales{
+    /* border: 2px solid red; */
+    /* margin-right: 5rem; */
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.noticias-principales img{
+    margin-top: 1rem;
+}
+
+.partidos{
+    width: 30rem;
+    margin-top: 1rem;
+    margin-right: 3rem;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    
+    height: 30%;
+    overflow: hidden;
+}
+
+
+.partidos-title{
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    font-family: sans-serif;
+    font-size: 1rem;
+    margin-top: 1rem;
+    gap: 2rem;
+}
+
+.partidos-title h6{
+    color: red;
+    
+}
+
+
+.partido-info{
+   
+    border: 1px solid rgb(167, 167, 167);
+    display: flex;
+    
+    margin-right: 5rem;
+    height: 100%;
+    width: 100%;
+    
+}
+
+
+.partido-info h2{
+    
+    font-family: sans-serif;
+    font-size: 0.8rem;
+    margin-left: 0.3rem;
+}
+
+.partido-info img{
+    margin-left: 1rem;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+.partido-result{
+    font-family: sans-serif;
+    /* display: flex; */
+    justify-content: center;
+    margin-top: 1rem;
+    align-items: center;
+    align-items: center;  
+    font-size: 0.8rem;
+    
+}
+
+
+.ultimo-partido{
+    
+    margin-top: 1rem;
+    width: auto;
+    
+}
+
+
+
+
+
+.publicidad-gif{
+    border: 1px solid grey;
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 1.4rem;
+}
+
+.publicidad-gif img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+.plantel-title{
+    font-family: "Anek Devanagari", sans-serif;
+    text-align: center;
+    margin-top: 6rem;
+    margin-bottom: 0.4rem;
+    
+}
+
+
+.plantel-profesional{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 0.1rem;
+    font-family: sans-serif;
+    margin-bottom: 1rem;
+    
+   
+}
+
+
+.jugador {
+    width: 70px; /* Ajusta el ancho según sea necesario */
+    height: 90px; /* Ajusta la altura según sea necesario */
+    background-color: #ccc; /* Color de fondo de los jugadores para visualizar el efecto */
+    margin: 10px; /* Ajusta el margen según sea necesario */
+    clip-path: polygon(0% 20%, 100% 0%, 100% 80%, 0% 100%);
+
+    position: relative; /* Necesario para posicionar el número de dorsal */
+    display: inline-block;
+}
+
+
+.jugador img {
+    width: 70px; /* Ajusta el ancho según sea necesario */
+    height: 80px; /* Ajusta la altura según sea necesario */
+    transition: filter 0.3s; /* Transición suave para el filtro */
+}
+
+
+.jugador span {
+    position: absolute; /* Posición absoluta para superponer el número de dorsal */
+    top: 50%; /* Ajusta la posición verticalmente */
+    left: 50%; /* Ajusta la posición horizontalmente */
+    transform: translate(-50%, -50%); /* Centra el número de dorsal */
+    color: white; /* Color del número de dorsal */
+    font-size: 50px; /* Tamaño del número de dorsal */
+    font-weight: bold; /* Peso de la fuente */
+    opacity: 0; /* Inicialmente oculto */
+    transition: opacity 0.3s; /* Transición suave para la opacidad */
+}
+
+
+.jugador:hover img {
+    filter: brightness(70%); /* Reduce el brillo al hacer hover */
+    background-color: red; 
+    
+}
+
+.jugador:hover span {
+    opacity: 1; /* Hace visible el número de dorsal al hacer hover */
+}
+
+
+
+footer{
+    background-color: rgb(24, 23, 23);
+    height: auto;
+}
+
+
+.footer-media{
+    display: flex;
+    
+    height: auto;
+    width: auto;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+}
+
+
+.logo-footer{
+    
+    margin-top: 3rem;
+    width: 7rem;
+    margin-left: 7rem;
+    
+}
+
+.logo-footer img{
+    height: 100%;
+}
+
+
+
+.social-links{
+    display: flex;
+    gap: 0.5rem;
+    height: 5rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+    margin-right: 4rem;
+}
+
+
+.social-item{
+    width: 4rem;
+    height: 4rem;  
+    border-radius: 40%;
+    overflow: hidden;
+}
+
+.social-item img{
+    width: 100%;
+    height: 100%;
+    border-radius: 40%;
+    filter: grayscale(100%);
+    transition: filter 0.1s transform 0.5s ease-out;
+    transition: transform 0.3s ease;
+    
+    
+   
+}
+
+.social-item:hover img {
+    filter: grayscale(0%); 
+    transform: scale(1.4);
+}
+
+
+.footer-sections{
+    
+    display: flex;
+    justify-content: space-around;
+    height: auto ;
+}
+
+
+.footer-section{
+    
+    width: 12%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    
+    
+    height: auto;
+
+}
+
+.footer-section h2{
+    color: #797070;
+    font-family: "Anek Devanagari", sans-serif;
+    font-weight: 300;
+    text-align: center;
+    white-space: nowrap;
+   
+}
+
+
+
+
+
+
+
+
+.footer-section h3{
+    font-family: "Anek Devanagari", sans-serif;
+    font-weight: 300;
+    transition: transform 0.3s ease;
+    color: #797070;
+    
+}
+
+.footer-section h3:hover{
+    transform: scale(1rem);
+    text-decoration: underline;
+    color: #fff;
+}
+
+
+.footer-section a{
+    text-decoration: none;
+    color: #797070;
+}
+
+.footer-separator{
+    color: #696868;
+    margin-left: 20rem;
+    margin-top: 1rem;
+    
+}
+
+.personal-info{
+   
+    display: flex;
+    justify-content: center
+}
+
+.personal-info img{
+    border-radius: 50%;
+   
+}
+
+
+.personal-info span{
+    color: #696868;
+    font-family: "Anek Devanagari", sans-serif;
+    margin-top: 7rem;
+}
+
+
+
+@media screen and (max-width: 768px){
+
+
+    body{
+        overflow-x: hidden;
+    }
+
+    .logo{
+        
+        margin-left: 1rem;
+    }
+
+    .logo img{
+        content: url('/assets/logo-river-xs.png');
+        width: 8rem;
+    }
+
+    header{
+        display: none;
+    }
+
+    nav{
+        height: auto;
+        
+        
+    }
+
+    .nav-item{
+        display: none;
+    }
+
+
+    .menu-icon{
+        display: block;
+        border-radius: 15%;
+        background-color: #474444;
+        height: auto;
+        width: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 2rem;
+    }
+
+    .menu-icon i{
+        font-size: 2rem;
+        font-weight: 590;
+        color: #fff;
+        margin-top: 0.2rem;
+
+        
+    }
+
+    .menu.active{
+        display: block;
+    }
+
+    /* .menu{
+        border: 2px solid red;
+        display: block;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+        background-color: rgb(34, 34, 34);
+        
+        
+        
+        
+        
+    } 
+    */
+
+    .menu {
+        
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+        background-color: rgb(34, 34, 34);
+        display: none;
+        max-height: 0; 
+        overflow: hidden; 
+    }
+
+   
+
+
+    .menu.active {
+        display: flex; 
+        max-height: 1000px; /* Altura máxima para mostrar todo el contenido */
+    }
+
+
+
+    .menu a{
+        text-decoration: none;
+        color: #fff;
+        font-family: "Oswald", sans-serif;
+        font-size: 1.5rem;
+    }
+
+
+
+    .noticias{
+       
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+
+    }
+
+    .noticias h2{
+        text-align: center;
+    }
+
+    .barra-separadora{
+        text-align: center;
+    }
+
+    .noticias-secundarias{
+        
+        width: 100%;
+        margin-right: 3rem;
+    }
+
+    
+
+    .noticia{
+        border: 1px solid rgb(230, 224, 224);
+        margin-top: 1rem;
+    }
+
+    
+
+    .noticia-text{
+        font-size: 1.3rem;
+        
+
+    }
+
+    .noticia-text h3{
+        font-size: 1.4rem;
+    }
+
+
+    .noticia-img{
+        display: flex;
+        justify-content: center;
+    }
+
+    .noticias-principales{
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2rem;
+    }
+
+    .noticias-principales h2{
+        margin-top: 5rem;
+        font-family: "Anek Devanagari", sans-serif;
+        font-size: 1.8rem;
+        font-weight: 300;
+    }
+
+    .noticias-principales img{
+        width: 22rem;
+        
+    }
+
+    .noticias-principales p{
+        display: none;
+    }
+
+    .ultimo-partido iframe{
+       
+        width: 22rem;
+    }
+
+    .partidos{
+        
+        margin-top: 8rem;
+        overflow:auto;
+    }
+
+    .partidos-title{
+        font-size: 1.4rem;
+       
+        
+    }
+
+    .partidos-title h3{
+        margin-left: 1.4rem;
+    }
+
+    .partido-info{
+        
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        overflow:auto;
+    }
+
+
+    .plantel-profesional{
+        flex-wrap: wrap;
+        
+    }
+
+
+    .footer-media{
+        
+        flex-direction: column;
+        
+    }
+
+    .logo-footer{
+        
+        
+        margin-left: 8rem;
+        width: 7rem;
+    }
+
+    .logo-footer img{
+        width: 100%;
+    }
+
+    .social-links{
+        margin-bottom: 2rem;
+        width: 100%;
+        border: 2px solid red;
+        flex-wrap: wrap;
+    }
+
+    .social-item{
+        width: 5rem;
+        height: 5rem;
+    }
+
+    .footer-sections{
+       display: none;
+    }
+
+    .footer-separator{
+        display: none;
+    }
+
+    .personal-info{
+        border: 2px solid red;
+        
+    }
+
+    .publicidad-gif{
+        width: 20rem;
+        margin-left: 5rem;
+    }
+
+  
+
+
+
+
+}
